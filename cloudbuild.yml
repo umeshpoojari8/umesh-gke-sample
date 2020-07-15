@@ -1,13 +1,11 @@
 steps:
 #First Clone from Google Cloud Source Repository  
 - name: 'gcr.io/cloud-builders/git'
-  args: ['clone','']
-  # Ex. - ['clone','https://source.developers.google.com/p/${_PROJECT}/r/${_REPO_NAME}']
+  args: ['clone','https://source.developers.google.com/p/${_PROJECT}/r/${_REPO_NAME}']
 
 #Build the image 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build','-t','']
-  # Ex. - ['build','-t','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}','.']
+  args: ['build','-t','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}','.']
 
 #Push the image  
 - name: 'gcr.io/cloud-builders/docker'
@@ -27,8 +25,8 @@ steps:
 substitutions:
     #GCP Specific configuration. Please DON'T change anything
     _PROJECT: umesh-gke-sample
-    _ZONE: asia-south1-a
-    _GKE_CLUSTER: 
+    _ZONE: us-central1-c #asia-south1-a
+    _GKE_CLUSTER: umesh-gke-sample
     
     #Repository Specific configuration. DevOps can change this settings
     _DEPLOYMENTNAME: nginx-app
@@ -36,7 +34,7 @@ substitutions:
     _REPO_NAME: umesh-gke-sample
     
     # Developers ONLY change
-    _VERSION: v1.0
+    _VERSION: v1.1
     
 options:
     substitution_option: 'ALLOW_LOOSE'
