@@ -12,4 +12,4 @@ kubectl create service nodeport webapp-nginx --tcp=80:80
 
 
 
-testing 01
+testing 02
