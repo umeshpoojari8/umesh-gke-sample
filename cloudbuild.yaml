@@ -1,6 +1,6 @@
 steps:
 #First Clone from Google Cloud Source Repository  
-- name: 'gcr.io/umesh-gke-sampl/git'
+- name: 'gcr.io/aerial-ceremony-283410/git'
   args: ['clone','https://source.developers.google.com/p/${_PROJECT}/r/${_REPO_NAME}']
 
 #Build the image 
