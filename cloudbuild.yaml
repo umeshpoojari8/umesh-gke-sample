@@ -5,7 +5,7 @@ steps:
 
 #Build the image 
 - name: 'gcr.io/aerial-ceremony-283410/docker'
-  args: ['build','-t','gcr.io/aerial-ceremony-283410/git:latest','.']
+  args: ['build','-t','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}','.']
   #gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}
 
 #Push the image  
