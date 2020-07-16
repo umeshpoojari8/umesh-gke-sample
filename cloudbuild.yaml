@@ -6,10 +6,9 @@ steps:
 #Build the image 
 - name: 'gcr.io/aerial-ceremony-283410/docker'
   args: ['build','-t','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}','.']
-  #gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}
 
 #Push the image  
-- name: 'gcr.io/aerial-ceremony-283410//docker'
+- name: 'gcr.io/aerial-ceremony-283410/docker'
   args: ['push','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}']
   
 #Update the container image using kubectl set
@@ -40,3 +39,5 @@ substitutions:
     
 options:
     substitution_option: 'ALLOW_LOOSE'
+
+    gcr.io/aerial-ceremony-283410/docker
