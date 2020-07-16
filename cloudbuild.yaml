@@ -5,7 +5,8 @@ steps:
 
 #Build the image 
 - name: 'gcr.io/umesh-gke-sample/docker'
-  args: ['build','-t','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}','.']
+  args: ['build','-t','gcr.io/aerial-ceremony-283410/git:latest','.']
+  #gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}
 
 #Push the image  
 - name: 'gcr.io/umesh-gke-sample/docker'
