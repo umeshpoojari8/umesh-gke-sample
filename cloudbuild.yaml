@@ -40,4 +40,4 @@ substitutions:
 options:
     substitution_option: 'ALLOW_LOOSE'
 
-    gcr.io/aerial-ceremony-283410/docker
+    #gcr.io/aerial-ceremony-283410/docker
