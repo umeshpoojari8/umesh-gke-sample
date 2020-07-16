@@ -34,7 +34,7 @@ substitutions:
     _REPO_NAME: umesh-gke-sample
     
     # Developers ONLY change
-    _VERSION: v1.0.4
+    _VERSION: v1.0.5
     
 options:
     substitution_option: 'ALLOW_LOOSE'
