@@ -1,19 +1,19 @@
 steps:
 #First Clone from Google Cloud Source Repository  
-- name: 'gcr.io/umesh-gke-sample/git'
+- name: 'gcr.io/aerial-ceremony-283410/git'
   args: ['clone','https://source.developers.google.com/p/${_PROJECT}/r/${_REPO_NAME}']
 
 #Build the image 
-- name: 'gcr.io/umesh-gke-sample/docker'
+- name: 'gcr.io/aerial-ceremony-283410/docker'
   args: ['build','-t','gcr.io/aerial-ceremony-283410/git:latest','.']
   #gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}
 
 #Push the image  
-- name: 'gcr.io/umesh-gke-sample/docker'
+- name: 'gcr.io/aerial-ceremony-283410//docker'
   args: ['push','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}']
   
 #Update the container image using kubectl set
-- name: 'gcr.io/umesh-gke-sample/kubectl'
+- name: 'gcr.io/aerial-ceremony-283410//kubectl'
   args:
   - 'set'
   - 'image'
@@ -25,7 +25,7 @@ steps:
   
 substitutions:
     #GCP Specific configuration. Please DON'T change anything
-    _PROJECT: umesh-gke-sample
+    _PROJECT: aerial-ceremony-283410
     _ZONE: us-central1-c #asia-south1-a
     _GKE_CLUSTER: umesh-gke-sample
     
@@ -35,7 +35,7 @@ substitutions:
     _REPO_NAME: umesh-gke-sample
     
     # Developers ONLY change
-    _VERSION: v1.02
+    _VERSION: v1.03
 
     
 options:
