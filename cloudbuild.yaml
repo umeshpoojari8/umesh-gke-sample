@@ -34,7 +34,7 @@ substitutions:
     _REPO_NAME: umesh-gke-sample
     
     # Developers ONLY change
-    _VERSION: v1.2
+    _VERSION: v1.01
 
     
 options:
