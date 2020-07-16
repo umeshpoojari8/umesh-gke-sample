@@ -26,7 +26,7 @@ substitutions:
     #GCP Specific configuration. Please DON'T change anything
     _PROJECT: aerial-ceremony-283410
     _ZONE: us-central1-c #asia-south1-a
-    _GKE_CLUSTER: umesh-gke-sample
+    #_GKE_CLUSTER: umesh-gke-sample
     
     #Repository Specific configuration. DevOps can change this settings
     _DEPLOYMENTNAME: nginx-1
@@ -34,7 +34,7 @@ substitutions:
     _REPO_NAME: umesh-gke-sample
     
     # Developers ONLY change
-    _VERSION: v1.2.0
+    _VERSION: v1.2.1
     
 options:
     substitution_option: 'ALLOW_LOOSE'
