@@ -12,7 +12,7 @@ steps:
   args: ['push','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}']
   
 #Update the container image using kubectl set
-- name: 'gcr.io/umesh-gke-sample/kubectl'
+- name: 'gcr.io/aerial-ceremony-283410/kubectl'
   args:
   - 'set'
   - 'image'
@@ -30,11 +30,11 @@ substitutions:
     
     #Repository Specific configuration. DevOps can change this settings
     _DEPLOYMENTNAME: nginx-app
-    _CONTAINERNAME: nginx-app    
+    _CONTAINERNAME: nginx-app  
     _REPO_NAME: umesh-gke-sample
     
     # Developers ONLY change
-    _VERSION: v1.0.3
+    _VERSION: v1.0.4
     
 options:
     substitution_option: 'ALLOW_LOOSE'
