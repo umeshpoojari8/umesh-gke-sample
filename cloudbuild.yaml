@@ -1,18 +1,18 @@
 steps:
 #First Clone from Google Cloud Source Repository  
-- name: 'gcr.io/cloud-builders/git'
+- name: 'gcr.io/umesh-gke-sample/git'
   args: ['clone','https://source.developers.google.com/p/${_PROJECT}/r/${_REPO_NAME}']
 
 #Build the image 
-- name: 'gcr.io/cloud-builders/docker'
+- name: 'gcr.io/umesh-gke-sample/docker'
   args: ['build','-t','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}','.']
 
 #Push the image  
-- name: 'gcr.io/cloud-builders/docker'
+- name: 'gcr.io/umesh-gke-sample/docker'
   args: ['push','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}']
   
 #Update the container image using kubectl set
-- name: 'gcr.io/cloud-builders/kubectl'
+- name: 'gcr.io/umesh-gke-sample/kubectl'
   args:
   - 'set'
   - 'image'
