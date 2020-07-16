@@ -1,6 +1,6 @@
 steps:
 #First Clone from Google Cloud Source Repository  
-- name: 'gcr.io/cloud-builders/git'
+- name: 'gcr.io/umesh-gke-sampl/git'
   args: ['clone','https://source.developers.google.com/p/${_PROJECT}/r/${_REPO_NAME}']
 
 #Build the image 
